@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saeed Ahmad | MERN Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Orbitron:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
@@ -28,10 +28,13 @@
             --light: #f0f0f5;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --radius: 12px;
+            --aindro-primary: #6366f1;
+            --aindro-secondary: #8b5cf6;
+            --aindro-gradient: linear-gradient(135deg, var(--aindro-primary), var(--aindro-secondary));
         }
 
         body {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--light);
             background: var(--dark);
@@ -620,6 +623,210 @@
             gap: 15px;
         }
 
+        /* =========================================== */
+        /* NEW: AindroCode Special Section */
+        /* =========================================== */
+        .aindrocode-section {
+            background: linear-gradient(135deg, rgba(26, 26, 37, 0.9), rgba(16, 16, 25, 0.95));
+            border-radius: 24px;
+            padding: 60px 40px;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.1);
+        }
+
+        .aindrocode-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .aindrocode-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .aindrocode-header h2 {
+            font-size: 3.2rem;
+            background: var(--aindro-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .aindrocode-header .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .aindrocode-badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .aindrocode-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .aindrocode-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .aindrocode-feature {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            transition: var(--transition);
+        }
+
+        .aindrocode-feature:hover {
+            transform: translateY(-5px);
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .aindrocode-feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--aindro-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .aindrocode-feature-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .aindrocode-feature h4 {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .aindrocode-feature p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .aindrocode-highlight {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            border-left: 4px solid var(--aindro-primary);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .aindrocode-highlight h4 {
+            color: white;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .aindrocode-highlight p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .aindrocode-languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .language-tag {
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .aindrocode-visual {
+            position: relative;
+        }
+
+        .aindrocode-visual img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .aindrocode-cta {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-aindro {
+            background: var(--aindro-gradient);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-aindro:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+        }
+
         /* Web App Design Slider - MODIFIED for mobile-like display */
         .design-slider-container {
             position: relative;
@@ -828,6 +1035,17 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1100px) {
+            .aindrocode-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .aindrocode-visual {
+                order: -1;
+            }
+        }
+
         @media (max-width: 992px) {
 
             .hero-content,
@@ -846,6 +1064,10 @@
 
             .contact-options {
                 grid-template-columns: 1fr;
+            }
+
+            .aindrocode-header h2 {
+                font-size: 2.6rem;
             }
         }
 
@@ -883,7 +1105,8 @@
 
             .projects-grid,
             .designs-grid,
-            .skills-grid {
+            .skills-grid,
+            .aindrocode-features {
                 grid-template-columns: 1fr;
             }
 
@@ -896,6 +1119,14 @@
                 max-width: 320px;
                 padding: 15px;
                 border-width: 10px;
+            }
+
+            .aindrocode-section {
+                padding: 40px 20px;
+            }
+
+            .aindrocode-header h2 {
+                font-size: 2.2rem;
             }
 
             .mobile-menu-btn.active i:before {
@@ -956,6 +1187,10 @@
                 max-width: 280px;
                 padding: 12px;
                 border-width: 8px;
+            }
+
+            .aindrocode-header h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -1213,9 +1448,6 @@
                         </div>
                     </div>
 
-<div class="project-category">
-                <h3 class="category-title">MERN Stack Projects</h3>
-                <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-img">
                             <img src="assets/ide.jpg" alt="Gesture-App">
@@ -1238,7 +1470,7 @@
                         </div>
                         <div class="project-info">
                             <h3>Book Store and Publication Portofolio</h3>
-                            <p>Udvasito Pathshala is a full-stack bookstore and publication portfolio app. It is production-ready, featuring a complete database and CMS integration. Since it primarily serves as a portfolio, there is no authentication system. Users can easily browse books and explore publications, showcasing the app’s features, design, and functionality.</p>
+                            <p>Udvasito Pathshala is a full-stack bookstore and publication portfolio app. It is production-ready, featuring a complete database and CMS integration. Since it primarily serves as a portfolio, there is no authentication system. Users can easily browse books and explore publications, showcasing the app's features, design, and functionality.</p>
                             <div class="project-links">
                                 <a href="https://udvasito-pathshala.vercel.app" class="btn">Live Demo</a>
                                 <a href="https://github.com/ashackmaster/Publication" class="btn btn-secondary">
@@ -1248,11 +1480,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Analytics Dashboard">
-                        </div>
-            <!-- Web App Design - MODIFIED SECTION -->
+<!-- Web App Design - MODIFIED SECTION -->
             <div class="project-category">
                 <h3 class="category-title">Web App Designs</h3>
 
@@ -1303,7 +1531,98 @@
                 </div>
             </div>
 
- 
+            <!-- =========================================== -->
+            <!-- NEW: AindroCode Special Section -->
+            <!-- =========================================== -->
+            <div class="aindrocode-section">
+                <div class="aindrocode-header">
+                    <div class="aindrocode-badge">
+                        <i class="fas fa-rocket"></i> UPCOMING PROJECT
+                    </div>
+                    <h2>AindroCode Mobile IDE</h2>
+                    <p class="subtitle">Revolutionary mobile IDE built with React Native Expo that supports 50+ programming languages. Code anywhere, anytime!</p>
+                </div>
+
+                <div class="aindrocode-content">
+                    <div>
+                        <div class="aindrocode-features">
+                            <div class="aindrocode-feature">
+                                <div class="aindrocode-feature-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>50+ Languages</h4>
+                                <p>Supports JavaScript, Python, Java, C++, C#, PHP, Ruby, Go, Rust, Swift, Kotlin and 40+ more languages with syntax highlighting.</p>
+                            </div>
+
+                            <div class="aindrocode-feature">
+                                <div class="aindrocode-feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4>Mobile First</h4>
+                                <p>Built with React Native Expo for optimal mobile experience. Code on your phone or tablet seamlessly.</p>
+                            </div>
+
+                            <div class="aindrocode-feature">
+                                <div class="aindrocode-feature-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h4>Cloud Compilation</h4>
+                                <p>Run and compile your code in the cloud. No need for local setup - just write and test instantly.</p>
+                            </div>
+
+                            <div class="aindrocode-feature">
+                                <div class="aindrocode-feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Real-time Collab</h4>
+                                <p>Collaborate with other developers in real-time. Perfect for pair programming and code reviews.</p>
+                            </div>
+                        </div>
+
+                        <div class="aindrocode-highlight">
+                            <h4><i class="fas fa-star"></i> Tech Stack</h4>
+                            <p><strong>Frontend:</strong> React Native, Expo, TypeScript, Monaco Editor API</p>
+                            <p><strong>Backend:</strong> Node.js, Express, WebSocket, Docker</p>
+                            <p><strong>Database:</strong> MongoDB, Redis for caching</p>
+                            <p><strong>Cloud:</strong> AWS/GCP for compilation servers</p>
+                            
+                            <div class="aindrocode-languages">
+                                <span class="language-tag">JavaScript</span>
+                                <span class="language-tag">Python</span>
+                                <span class="language-tag">Java</span>
+                                <span class="language-tag">C++</span>
+                                <span class="language-tag">C#</span>
+                                <span class="language-tag">PHP</span>
+                                <span class="language-tag">Ruby</span>
+                                <span class="language-tag">Go</span>
+                                <span class="language-tag">Rust</span>
+                                <span class="language-tag">Swift</span>
+                                <span class="language-tag">Kotlin</span>
+                                <span class="language-tag">+40 more</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aindrocode-visual">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AindroCode Mobile IDE">
+                    </div>
+                </div>
+
+                <div class="aindrocode-cta">
+                    <h3 class="cta-title">Be Among the First to Experience AindroCode!</h3>
+                    <p class="cta-subtitle">Join our early access program and get exclusive benefits including lifetime discounts, priority support, and feature voting rights.</p>
+                    
+                    <button class="btn-aindro" id="beFirstCustomerBtn">
+                        <i class="fas fa-crown"></i> Be Our First Customer
+                    </button>
+                    
+                    <p style="color: var(--gray); margin-top: 15px; font-size: 0.9rem;">
+                        <i class="fas fa-shield-alt"></i> Early access available for first 100 customers only
+                    </p>
+                </div>
+            </div>
+
+
     <!-- Contact Section - EmailJS -->
     <section id="contact" class="contact">
         <div class="container">
@@ -1369,7 +1688,7 @@
                         <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn">Send Message</button>
                         <div class="form-status" id="formStatus"></div>
-                    </orm>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1565,6 +1884,50 @@
                 });
             });
 
+            // ===========================================
+            // NEW: Be Our First Customer Button Functionality
+            // ===========================================
+            const beFirstCustomerBtn = document.getElementById('beFirstCustomerBtn');
+            
+            beFirstCustomerBtn.addEventListener('click', function() {
+                // Auto-fill the contact form for AindroCode
+                document.getElementById('subject').value = "AindroCode Early Access - Be Our First Customer";
+                document.getElementById('message').value = `Dear Saeed,
+
+I'm interested in becoming one of the first customers for AindroCode Mobile IDE. Please add me to your early access list!
+
+Here's what I'm looking forward to:
+- Mobile coding experience with 50+ languages
+- Cloud compilation feature
+- Real-time collaboration
+- Priority support and lifetime discounts
+
+Please send me more details about the early access program, pricing, and launch timeline.
+
+Best regards,
+[Your Name]`;
+
+                // Scroll to the contact form
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Focus on the name field
+                setTimeout(() => {
+                    document.getElementById('name').focus();
+                }, 800);
+
+                // Show a notification
+                const originalText = beFirstCustomerBtn.innerHTML;
+                beFirstCustomerBtn.innerHTML = '<i class="fas fa-check"></i> Form Pre-filled!';
+                beFirstCustomerBtn.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
+                
+                setTimeout(() => {
+                    beFirstCustomerBtn.innerHTML = originalText;
+                    beFirstCustomerBtn.style.background = 'linear-gradient(135deg, #6366f1, #8b5cf6)';
+                }, 2000);
+            });
+
             // Contact Form - EmailJS Integration
             const contactForm = document.getElementById('contactForm');
             const formStatus = document.getElementById('formStatus');
@@ -1678,4 +2041,4 @@
         });
     </script>
 </body>
-</html>
+    </html>
